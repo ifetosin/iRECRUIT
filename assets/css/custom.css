@@ -1,0 +1,176 @@
+html,
+body {
+  height: 100%;
+  margin: 0;
+}
+
+.full-height {
+  height: 100%;
+}
+
+.center-div {
+  margin-top: 12rem;
+  margin-right: auto;
+  margin-left: auto;
+  width: 35%;
+}
+
+.center-div2 {
+  margin-top: 1.5rem;
+  margin-right: auto;
+  margin-left: auto;
+  width: 35%;
+}
+
+.secondary-sidebar{
+  background-color: #f2f4f2 !important;
+}
+
+.mt {
+  margin-top: 8rem !important;
+}
+
+.mtt {
+  margin-top: 12rem !important;
+}
+
+.dimension{
+    flex: 0 0 33.333333%; 
+    max-width: 33.333333%;
+}
+
+/* .bg-login {
+  background-color: #6a93cb;
+  background-image: linear-gradient(315deg, #6a93cb 0%, #a4bfef 74%);
+} */
+
+.bg-nav {
+  background-color: #f2f4f2;
+}
+
+.colour-theme {
+  color: #556b2f !important;
+}
+
+.text-red {
+  color: #8d0e0e !important;
+}
+
+.btn-accept {
+  background-color: #556b2f !important;
+  border: none !important;
+  color: #fff !important;
+}
+
+.btn-reject {
+  background-color: #fff !important;
+  border: 1px solid #556b2f !important;
+  color: #556b2f !important;
+}
+
+.btn-irecruit {
+  color: #fff !important;
+  background-color: #556b2f !important;
+}
+
+.btn-text {
+  color: #fff !important;
+}
+
+.login-input {
+  border-color: #556b2f !important;
+}
+
+.ls-2 {
+  letter-spacing: 0.2em !important;
+}
+
+.logo-box {
+  padding-left: 2rem !important;
+  padding-bottom: 1.3rem !important;
+  margin-left: 3rem !important;
+}
+
+.logo-svg {
+  width: 70px !important;
+  height: 70px !important;
+}
+
+.imgBack::before {
+  content: "";
+  /* The image used */
+  background-image: url("../images/interview.jpg") !important;
+
+  /* Full height*/
+  height: 100%;
+  width: 100%;
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 0.1;
+  z-index: -1;
+}
+
+.form-control {
+  font-size: 1rem !important;
+}
+
+.page-header .navbar-nav > li > a:focus,
+.page-header .navbar-nav > li > a:hover,
+.page-header .navbar-nav > li > a:link {
+  color: #556b2f !important;
+}
+
+.pagination li.active a {
+  background: #556b2f !important;
+  border-color: #556b2f !important;
+}
+
+.custom-select-sm {
+  font-size: 1rem !important;
+  padding: 0.2rem 2rem 0.2rem 1rem !important;
+}
+
+.assessment {
+  display: grid;
+  grid-row-gap: 10px;
+}
+
+form {
+  display: block;
+}
+
+form button {
+  width: 100%;
+}
+
+@media (min-width: 992px) {
+  form {
+    display: inline;
+  }
+
+  form button {
+    width: auto;
+  }
+
+  
+}
+
+@media (max-width: 400px) {
+  .mt{
+    margin-top: 5rem !important;
+  }
+}
+
+@media (max-width: 700px) {
+  .dimension{
+    flex: none; 
+    max-width: none;
+  }
+}

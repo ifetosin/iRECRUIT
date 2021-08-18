@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <meta name="author" content="Ife Oluwatosin" />
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+
+    <title>
+        Apply- iRECRUIT
+    </title>
+
+    <link rel="icon" href="assets/images/favicon.svg">
+
+    <!-- Plugin CSS -->
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet" />
+
+    <!-- Custom styles for this template -->
+    <link href="assets/css/custom.css" rel="stylesheet" />
+
+
+</head>
+
+<body>
+
+    <nav class="navbar navbar-light bg-nav">
+        <div class="container-fluid">
+            <div class="mt-n3">
+                <img class="logo-svg" src="assets/images/racer-logo.svg" />
+            </div>
+            <form class="d-flex">
+                <h5 class="colour-theme">iRECRUIT</h5>
+            </form>
+        </div>
+    </nav>
+
+
+    <div class="center-div2">
+        <div class="text-left">
+            <h6 class="colour-theme">Please input your details below</h6>
+        </div>
+        <div class="mt-2">
+            <form>
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                        <label for="">Firstname</label>
+                        <input type="name" class="form-control" id="first_name" placeholder="Firstname" required>
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label for="">Lastname</label>
+                        <input type="name" class="form-control" id="last_name" placeholder="Lastname" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="">Email Address</label>
+                    <input type="email" class="form-control" id="email" placeholder="example@gmail.com" required>
+                </div>
+                <div class="form-group">
+                    <label for="">Phone Number</label>
+                    <input type="number" class="form-control" id="" placeholder="0703******" required>
+                </div>
+                <div class="form-group">
+                    <label for="">Job Role</label>
+                    <select class="form-control" required>
+                        <option selected>Select</option>
+                        <option>Product Designer</option>
+                        <option>IT Operator</option>
+                        <option>Software Developeer</option>
+                        <option>Cyber Security Officer</option>
+                        <option>Sales Representative</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label class="" for="customFile">Upload CV</label>
+                    <div class="custom-file">
+                        <input type="file" class="custom-file-input" id="customFile" name="filename">
+                        <label class="custom-file-label" for="customFile">Choose file</label>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="" for="customFile">Upload Cover Letter</label>
+                    <div class="custom-file">
+                        <input type="file" class="custom-file-input" id="customFile" name="filename">
+                        <label class="custom-file-label" for="customFile">Choose file</label>
+                    </div>
+                </div>
+
+                <div class="mt-5 mb-5">
+                    <button type="submit" class="btn btn-irecruit btn-block"><a href="sucessful_submission.html"></a><span
+                                class="btn-text">Apply</span>
+                        </a></button>
+                </div>
+            </form>
+        </div>
+
+    </div>
+
+    <script src="assets/plugins/jquery/jquery-3.5.1.min.js"></script>
+    <script src="assets/js/bootstrap.js"></script>
+
+    <script>
+        function validateEmail(email) {
+            const re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+            return re.test(email);
+        }
+
+        function validate() {
+            const $result = $("#result");
+            const email = $("#email").val();
+            $result.text("");
+
+            if (validateEmail(email)) {
+                $result.text(email + " is valid :)");
+                $result.css("color", "green");
+            } else {
+                $result.text(email + " is not valid :(");
+                $result.css("color", "red");
+            }
+            return false;
+        }
+
+        $("#email").on("input", validate);
+
+        $(".custom-file-input").on("change", function () {
+            var fileName = $(this).val().split("\\").pop();
+            $(this).siblings(".custom-file-label").addClass("selected").html(fileName);
+        });
+    </script>
+</body>
+
+</html>

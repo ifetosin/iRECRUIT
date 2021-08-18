@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset='utf-8'>
+  <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+  <meta name="author" content="Ife Oluwatosin" />
+  <meta name='viewport' content='width=device-width, initial-scale=1'>
+
+  <title>
+    View- iRECRUIT
+  </title>
+
+  <link rel="icon" href="assets/images/favicon.svg">
+  <!-- Plugin CSS -->
+  <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="assets/css/pagekit.min.css">
+  <link rel="stylesheet" href="assets/plugins/font-awesome/css/all.min.css">
+  <link rel="stylesheet" href="assets/plugins/datatable/css/datatable.css">
+
+  <!-- Custom styles for this template -->
+  <link href="assets/css/custom.css" rel="stylesheet" />
+</head>
+
+<body>
+  <!-- Page Container -->
+  <div class="page-container">
+    <!-- Page Content -->
+    <div class="page-content">
+
+      <!-- Sidebar -->
+      <div class="secondary-sidebar">
+        <div class="secondary-sidebar-bar">
+          <img class="logo-box" src="./assets/images/racer-logo.svg" />
+        </div>
+        <div class="secondary-sidebar-menu">
+          <ul class="accordion-menu">
+            <li>
+              <a href="applications-assessment.html">
+                <i class="menu-icon fa fa-folder"></i><span>Appications Assessment</span>
+              </a>
+            </li>
+            <li class="active-page">
+              <a href="interview-result.html">
+                <i class="menu-icon fa fa-folder-open"></i><span>Interview Result</span>
+              </a>
+            </li>
+            <li>
+              <a href="onboard.html">
+                <i class="menu-icon fa fa-tasks"></i><span>Onboard</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+
+      <!-- Page Header -->
+      <div class="page-header">
+
+        <nav class="navbar navbar-default navbar-expand-md">
+          <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+              <div class="logo-sm">
+                <a href="javascript:void(0)" id="sidebar-toggle-button"><i class="menu-icon fas fa-bars"></i></a>
+                <a class="logo-box" href=""><span></span></a>
+              </div>
+              <button type="button" class="navbar-toggler collapsed" data-toggle="collapse"
+                data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                <i class="fas fa-angle-down"></i>
+              </button>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+
+            <div class="collapse navbar-collapse justify-content-between" id="bs-example-navbar-collapse-1">
+              <ul class="nav navbar-nav mr-auto">
+                <li class="collapsed-sidebar-toggle-inv"><a href="javascript:void(0)"
+                    id="collapsed-sidebar-toggle-button"><i class="fas fa-bars"></i></a></li>
+              </ul>
+            </div><!-- /.navbar-collapse -->
+            <div>
+              <p class="p-2 colour-theme">Ife Oluwatosin(oluwatosint) | <a href="login.html"><span
+                    class="colour-theme">Log Out</span></a></p>
+            </div>
+          </div><!-- /.container-fluid -->
+        </nav>
+
+      </div><!-- /Page Header -->
+
+      <!-- Page Inner -->
+      <div class="page-inner no-page-title">
+        <div id="main-wrapper">
+          <div class="content-header">
+            <h3 class=""><span class="colour-theme">All Applications</span></h3>
+            <!-- <span class="font-medium ml-2">&#8250 </span>
+            <span class="header-weight">All Appications</span> -->
+          </div>
+
+          <div class="row">
+            <div class="col-lg-12">
+              <div class="card">
+                <div class="card-body">
+                  <div class="table-responsive">
+                    <table id="table-content" class="table table-hover dTable">
+                      <thead class="">
+                        <tr>
+                          <th scope="col">S/N</th>
+                          <th scope="col">Applicant Name</th>
+                          <th scope="col">Applicant Email</th>
+                          <th scope="col">Phone Number</th>
+                          <th scope="col">Documents Assessment</th>
+                          <th scope="col">Interview Result</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>1</td>
+                          <td>Ifeanyi Okwu</td>
+                          <td>ifeanyi.okwu@gmail.com</td>
+                          <td>09087654321</td>
+                          <td class="colour-theme">Satisfactory</td>
+                          <td class="assessment">
+                            <button type="button" class="btn btn-accept" data-toggle="modal"
+                              data-target="#myModal">Successful</button>
+                            <button type="button" class="btn btn-reject" data-toggle="modal"
+                              data-target="#myModalReject">Failed</button>
+                          </td>
+                        </tr>
+
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Modal -->
+        <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="initiateApproval"
+          aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLongTitle">Modal title</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                The documnets have been reviewed and they are satisfactory for a Tier 2 account.
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-outline-primary" data-dismiss="modal">Cancel</button>
+                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal2"
+                  data-dismiss="modal">Approve</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="modal fade" id="myModalReject" tabindex="-1" role="dialog" aria-labelledby="initiateApproval"
+          aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLongTitle">Modal title</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                <p>You are about to reject the request to perfect the account 0011222334.</p>
+                <label class="mt-3 ">Comment:</label>
+                <textarea rows="4" class="w-100 rounded"></textarea>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-outline-primary" data-dismiss="modal">Cancel</button>
+                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal3"
+                  data-dismiss="modal">Reject</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="page-footer">
+          <p>2021 &copy; iSOLUTIONS</small></p>
+        </div>
+      </div><!-- /Page Inner -->
+
+    </div><!-- /Page Content -->
+  </div><!-- /Page Container -->
+
+
+  <!-- Vendor JS -->
+  <script src="assets/plugins/jquery/jquery-3.5.1.min.js"></script>
+  <script src="assets/plugins/jquery/jquery.slimscroll.min.js"></script>
+  <script src="assets/plugins/popper/popper.min.js"></script>
+  <script src="assets/plugins/datatable/js/datatable.min.js"></script>
+  <script src="assets/plugins/datatable/js/datatable.bootstrap.js"></script>
+  <script src="assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+  <script src="assets/js/pagekit.min.js"></script>
+
+  <script>
+    // Data Table Logic
+    $(document).ready(function () {
+      $('.dTable').DataTable();
+    });
+
+    $('#myModal').on('shown.bs.modal', function () {
+      $('#myInput').trigger('focus')
+    });
+  </script>
+
+
+
+</body>
+
+</html>
