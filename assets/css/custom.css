@@ -34,6 +34,11 @@ body {
   margin-top: 12rem !important;
 }
 
+.mttt {
+  margin-top: 25rem !important;
+}
+
+
 .dimension{
     flex: 0 0 33.333333%; 
     max-width: 33.333333%;
@@ -52,8 +57,16 @@ body {
   color: #556b2f !important;
 }
 
+.pagination li a {
+	color: #556b2f !important;
+}
+
 .text-red {
   color: #8d0e0e !important;
+}
+
+.text-amber {
+  color: #cfa601 !important;
 }
 
 .btn-accept {
@@ -131,6 +144,7 @@ body {
 
 .form-control {
   font-size: 1rem !important;
+  padding: 6px 12px !important;
 }
 
 .page-header .navbar-nav > li > a:focus,

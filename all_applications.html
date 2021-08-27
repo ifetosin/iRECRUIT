@@ -8,7 +8,7 @@
   <meta name='viewport' content='width=device-width, initial-scale=1'>
 
   <title>
-    View- iRECRUIT
+    All Apllications- iRECRUIT
   </title>
 
   <link rel="icon" href="assets/images/favicon.svg">
@@ -46,7 +46,7 @@
               </a>
             </li>
             <li>
-              <a href="profile_users.html">
+              <a href="profile-users.html">
                 <i class="menu-icon fa fa-users"></i><span>Profile Users</span>
               </a>
             </li>
@@ -110,8 +110,10 @@
                           <th scope="col">Applicant Name</th>
                           <th scope="col">Applicant Email</th>
                           <th scope="col">Phone Number</th>
-                          <th scope="col">Documents</th>
-                          <th scope="col">Action</th>
+                          <th scope="col">Job Role</th>
+                          <th scope="col">Documents Assessment</th>
+                          <th scope="col">Interview Result</th>
+                          <th scope="col">Onboard Status</th>
                         </tr>
                       </thead>
                       <tbody>
@@ -119,64 +121,274 @@
                           <td>1</td>
                           <td>Ifeanyi Okwu</td>
                           <td>ifeanyi.okwu@gmail.com</td>
-                          <td>09087654321</td>
-                          <td>
-                            <div>
-                              <ul class="list-group">
-                                <li class="list-group-item"><a href="#"><span class="">CV</span></a></li>
-                                <li class="list-group-item"><a href="#"><span class="">Cover Letter</span></a></li>
-                              </ul>
-                            </div>
-                          </td>
-                          <td class="assessment">
-                            <button type="button" class="btn btn-accept" data-toggle="modal"
-                              data-target="#myModal">Schedule Interview</button>
-                            <button type="button" class="btn btn-reject" data-toggle="modal"
-                              data-target="#myModalReject">Reject Application</button>
+                          <td>09081234567</td>
+                          <td>Front End Developer</td>
+                          <td class="colour-theme">Satisfactory</td>
+                          <td class="colour-theme">Successful</td>
+                          <td class="colour-theme">Onboarded</td>
                           </td>
                         </tr>
 
                         <tr>
                           <td>2</td>
-                          <td>Ojo Adebayo</td>
-                          <td>ojo.adebayo@gmail.com</td>
-                          <td>07034567832</td>
-                          <td>
-                            <div>
-                              <ul class="list-group">
-                                <li class="list-group-item"><a href="#"><span class="">CV</span></a></li>
-                                <li class="list-group-item"><a href="#"><span class="">Cover Letter</span></a></li>
-                              </ul>
-                            </div>
-                          </td>
-                          <td class="assessment">
-                            <button type="button" class="btn btn-accept" data-toggle="modal"
-                              data-target="#myModal">Schedule Interview</button>
-                            <button type="button" class="btn btn-reject" data-toggle="modal"
-                              data-target="#myModalReject">Reject Application</button>
+                          <td>Olu Adeboye</td>
+                          <td>olu.adeboye@gmail.com</td>
+                          <td>09081234567</td>
+                          <td>Back End Developer</td>
+                          <td class="colour-theme">Satisfactory</td>
+                          <td class="colour-theme">Successful</td>
+                          <td class="text-amber">Pending</td>
+                         </tr>
+
+                        <tr>
+                          <td>3</td>
+                          <td>Hassan Ali</td>
+                          <td>hassan.ali@gmail.com</td>
+                          <td>08033443423</td>
+                          <td>Data Analyst</td>
+                          <td class="colour-theme">Satisfactory</td>
+                          <td class="text-red">Failed</td>
+                          <td class="text-red">NIL</td>
+                        </tr>
+
+                        <tr>
+                          <td>4</td>
+                          <td>Ifeanyi Okwu</td>
+                          <td>ifeanyi.okwu@gmail.com</td>
+                          <td>09081234567</td>
+                          <td>Front End Developer</td>
+                          <td class="colour-theme">Satisfactory</td>
+                          <td class="colour-theme">Successful</td>
+                          <td class="colour-theme">Onboarded</td>
                           </td>
                         </tr>
 
                         <tr>
-                          <td>3</td>
-                          <td>Uju Oma</td>
-                          <td>uju.oma@gmail.com</td>
-                          <td>09087654321</td>
-                          <td>
-                            <div>
-                              <ul class="list-group">
-                                <li class="list-group-item"><a href="#"><span class="">CV</span></a></li>
-                                <li class="list-group-item"><a href="#"><span class="">Cover Letter</span></a></li>
-                              </ul>
-                            </div>
-                          </td>
-                          <td class="assessment">
-                            <button type="button" class="btn btn-accept" data-toggle="modal"
-                              data-target="#myModal">Schedule Interview</button>
-                            <button type="button" class="btn btn-reject" data-toggle="modal"
-                              data-target="#myModalReject">Reject Application</button>
+                          <td>5</td>
+                          <td>Olu Adeboye</td>
+                          <td>olu.adeboye@gmail.com</td>
+                          <td>09081234567</td>
+                          <td>Back End Developer</td>
+                          <td class="colour-theme">Satisfactory</td>
+                          <td class="colour-theme">Successful</td>
+                          <td class="text-amber">Pending</td>
+                         </tr>
+
+                        <tr>
+                          <td>6</td>
+                          <td>Hassan Ali</td>
+                          <td>hassan.ali@gmail.com</td>
+                          <td>08033443423</td>
+                          <td>Data Analyst</td>
+                          <td class="colour-theme">Satisfactory</td>
+                          <td class="text-red">Failed</td>
+                          <td class="text-red">NIL</td>
+                        </tr>
+
+                        <tr>
+                          <td>7</td>
+                          <td>Ifeanyi Okwu</td>
+                          <td>ifeanyi.okwu@gmail.com</td>
+                          <td>09081234567</td>
+                          <td>Front End Developer</td>
+                          <td class="colour-theme">Satisfactory</td>
+                          <td class="colour-theme">Successful</td>
+                          <td class="colour-theme">Onboarded</td>
                           </td>
                         </tr>
+
+                        <tr>
+                          <td>8</td>
+                          <td>Olu Adeboye</td>
+                          <td>olu.adeboye@gmail.com</td>
+                          <td>09081234567</td>
+                          <td>Back End Developer</td>
+                          <td class="colour-theme">Satisfactory</td>
+                          <td class="colour-theme">Successful</td>
+                          <td class="text-amber">Pending</td>
+                         </tr>
+
+                        <tr>
+                          <td>9</td>
+                          <td>Hassan Ali</td>
+                          <td>hassan.ali@gmail.com</td>
+                          <td>08033443423</td>
+                          <td>Data Analyst</td>
+                          <td class="colour-theme">Satisfactory</td>
+                          <td class="text-red">Failed</td>
+                          <td class="text-red">NIL</td>
+                        </tr>
+
+                        <tr>
+                          <td>10</td>
+                          <td>Ifeanyi Okwu</td>
+                          <td>ifeanyi.okwu@gmail.com</td>
+                          <td>09081234567</td>
+                          <td>Front End Developer</td>
+                          <td class="colour-theme">Satisfactory</td>
+                          <td class="colour-theme">Successful</td>
+                          <td class="colour-theme">Onboarded</td>
+                          </td>
+                        </tr>
+
+                        <tr>
+                          <td>11</td>
+                          <td>Olu Adeboye</td>
+                          <td>olu.adeboye@gmail.com</td>
+                          <td>09081234567</td>
+                          <td>Back End Developer</td>
+                          <td class="colour-theme">Satisfactory</td>
+                          <td class="colour-theme">Successful</td>
+                          <td class="text-amber">Pending</td>
+                         </tr>
+
+                        <tr>
+                          <td>12</td>
+                          <td>Hassan Ali</td>
+                          <td>hassan.ali@gmail.com</td>
+                          <td>08033443423</td>
+                          <td>Data Analyst</td>
+                          <td class="colour-theme">Satisfactory</td>
+                          <td class="text-red">Failed</td>
+                          <td class="text-red">NIL</td>
+                        </tr>
+
+                        <tr>
+                          <td>13</td>
+                          <td>Ifeanyi Okwu</td>
+                          <td>ifeanyi.okwu@gmail.com</td>
+                          <td>09081234567</td>
+                          <td>Front End Developer</td>
+                          <td class="colour-theme">Satisfactory</td>
+                          <td class="colour-theme">Successful</td>
+                          <td class="colour-theme">Onboarded</td>
+                          </td>
+                        </tr>
+
+                        <tr>
+                          <td>14</td>
+                          <td>Olu Adeboye</td>
+                          <td>olu.adeboye@gmail.com</td>
+                          <td>09081234567</td>
+                          <td>Back End Developer</td>
+                          <td class="colour-theme">Satisfactory</td>
+                          <td class="colour-theme">Successful</td>
+                          <td class="text-amber">Pending</td>
+                         </tr>
+
+                        <tr>
+                          <td>15</td>
+                          <td>Hassan Ali</td>
+                          <td>hassan.ali@gmail.com</td>
+                          <td>08033443423</td>
+                          <td>Data Analyst</td>
+                          <td class="colour-theme">Satisfactory</td>
+                          <td class="text-red">Failed</td>
+                          <td class="text-red">NIL</td>
+                        </tr>
+
+                        <tr>
+                          <td>16</td>
+                          <td>Ifeanyi Okwu</td>
+                          <td>ifeanyi.okwu@gmail.com</td>
+                          <td>09081234567</td>
+                          <td>Front End Developer</td>
+                          <td class="colour-theme">Satisfactory</td>
+                          <td class="colour-theme">Successful</td>
+                          <td class="colour-theme">Onboarded</td>
+                          </td>
+                        </tr>
+
+                        <tr>
+                          <td>17</td>
+                          <td>Olu Adeboye</td>
+                          <td>olu.adeboye@gmail.com</td>
+                          <td>09081234567</td>
+                          <td>Back End Developer</td>
+                          <td class="colour-theme">Satisfactory</td>
+                          <td class="colour-theme">Successful</td>
+                          <td class="text-amber">Pending</td>
+                         </tr>
+
+                        <tr>
+                          <td>18</td>
+                          <td>Hassan Ali</td>
+                          <td>hassan.ali@gmail.com</td>
+                          <td>08033443423</td>
+                          <td>Data Analyst</td>
+                          <td class="colour-theme">Satisfactory</td>
+                          <td class="text-red">Failed</td>
+                          <td class="text-red">NIL</td>
+                        </tr>
+
+                        <tr>
+                          <td>19</td>
+                          <td>Ifeanyi Okwu</td>
+                          <td>ifeanyi.okwu@gmail.com</td>
+                          <td>09081234567</td>
+                          <td>Front End Developer</td>
+                          <td class="colour-theme">Satisfactory</td>
+                          <td class="colour-theme">Successful</td>
+                          <td class="colour-theme">Onboarded</td>
+                          </td>
+                        </tr>
+
+                        <tr>
+                          <td>20</td>
+                          <td>Olu Adeboye</td>
+                          <td>olu.adeboye@gmail.com</td>
+                          <td>09081234567</td>
+                          <td>Back End Developer</td>
+                          <td class="colour-theme">Satisfactory</td>
+                          <td class="colour-theme">Successful</td>
+                          <td class="text-amber">Pending</td>
+                         </tr>
+
+                        <tr>
+                          <td>21</td>
+                          <td>Hassan Ali</td>
+                          <td>hassan.ali@gmail.com</td>
+                          <td>08033443423</td>
+                          <td>Data Analyst</td>
+                          <td class="colour-theme">Satisfactory</td>
+                          <td class="text-red">Failed</td>
+                          <td class="text-red">NIL</td>
+                        </tr>
+
+                        <tr>
+                          <td>22</td>
+                          <td>Ifeanyi Okwu</td>
+                          <td>ifeanyi.okwu@gmail.com</td>
+                          <td>09081234567</td>
+                          <td>Front End Developer</td>
+                          <td class="colour-theme">Satisfactory</td>
+                          <td class="colour-theme">Successful</td>
+                          <td class="colour-theme">Onboarded</td>
+                          </td>
+                        </tr>
+
+                        <tr>
+                          <td>23</td>
+                          <td>Olu Adeboye</td>
+                          <td>olu.adeboye@gmail.com</td>
+                          <td>09081234567</td>
+                          <td>Back End Developer</td>
+                          <td class="colour-theme">Satisfactory</td>
+                          <td class="colour-theme">Successful</td>
+                          <td class="text-amber">Pending</td>
+                         </tr>
+
+                        <tr>
+                          <td>24</td>
+                          <td>Hassan Ali</td>
+                          <td>hassan.ali@gmail.com</td>
+                          <td>08033443423</td>
+                          <td>Data Analyst</td>
+                          <td class="colour-theme">Satisfactory</td>
+                          <td class="text-red">Failed</td>
+                          <td class="text-red">NIL</td>
+                        </tr>
+
 
                       </tbody>
                     </table>
