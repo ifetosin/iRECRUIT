@@ -13,7 +13,7 @@
 
     <link rel="icon" href="assets/images/favicon.svg">
     <!-- Plugin CSS -->
-    <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="assets/plugins/bootstrap/css/bootstrap.min.css" />
     <link rel="stylesheet" href="assets/css/pagekit.min.css">
     <link rel="stylesheet" href="assets/plugins/font-awesome/css/all.min.css">
     <link rel="stylesheet" href="assets/plugins/datatable/css/datatable.css">
@@ -36,20 +36,25 @@
                 <div class="secondary-sidebar-menu">
                     <ul class="accordion-menu">
                         <li>
+                            <a href="dashboard-hr.html">
+                              <i class="menu-icon fa fa-database"></i><span>Dashboard</span>
+                            </a>
+                          </li>
+                          <li>
                             <a href="applications-assessment.html">
-                                <i class="menu-icon fa fa-folder"></i><span>Appications Assessment</span>
+                              <i class="menu-icon fa fa-folder"></i><span>Appication Assessment</span>
                             </a>
-                        </li>
-                        <li>
-                            <a href="interview-result.html">
-                                <i class="menu-icon fa fa-folder-open"></i><span>Interview Result</span>
+                          </li>
+                          <li>
+                            <a href="applicant-interview-result.html">
+                              <i class="menu-icon fa fa-folder-open"></i><span>Applicant Interview Result</span>
                             </a>
-                        </li>
-                        <li class="active-page">
+                          </li>
+                          <li class="active-page">
                             <a href="onboard.html">
-                                <i class="menu-icon fa fa-tasks"></i><span>Onboard</span>
+                              <i class="menu-icon fa fa-tasks"></i><span>Onboard</span>
                             </a>
-                        </li>
+                          </li>
                     </ul>
                 </div>
             </div>
@@ -363,18 +368,9 @@
     <script src="assets/plugins/popper/popper.min.js"></script>
     <script src="assets/plugins/datatable/js/datatable.min.js"></script>
     <script src="assets/plugins/datatable/js/datatable.bootstrap.js"></script>
-    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/plugins/bootstrap/js/bootstrap.min.js"></script>
     <script src="assets/js/pagekit.min.js"></script>
-
-    <script>
-        // Data Table Logic
-        $(document).ready(function () {
-            $('.dTable').DataTable();
-        });
-
-    </script>
-
-
+    <script src="assets/js/custom.js"></script>
 
 </body>
 

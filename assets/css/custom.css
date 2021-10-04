@@ -66,7 +66,7 @@ body {
 }
 
 .text-amber {
-  color: rgb(154, 123, 1) !important;
+  color: #c59503 !important;
 }
 
 .btn-accept {
@@ -100,6 +100,10 @@ body {
 
 .btn-text {
   color: #fff !important;
+}
+
+.btn-text2 {
+  color: #333 !important;
 }
 
 .login-input {

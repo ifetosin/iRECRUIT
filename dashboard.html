@@ -13,7 +13,7 @@
 
   <link rel="icon" href="assets/images/favicon.svg">
   <!-- Plugin CSS -->
-  <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="assets/plugins/bootstrap/css/bootstrap.min.css" />
   <link rel="stylesheet" href="assets/css/pagekit.min.css">
   <link rel="stylesheet" href="assets/plugins/font-awesome/css/all.min.css">
 
@@ -173,28 +173,7 @@
   <script src="assets/js/pagekit.min.js"></script>
 
   <script src='assets/plugins/charts/Chart.bundle.min.js'></script>
-  <script>
-    $(document).ready(function () {
-      var ctx = $("#chart-line");
-      var myLineChart = new Chart(ctx, {
-        type: 'pie',
-        data: {
-          labels: ["Pending", "Successful", "Rejected"],
-          datasets: [{
-            data: [500, 200, 300],
-            backgroundColor: ["#FFBF00", "#556b2f", "#8d0e0e"]
-          }]
-        },
-        options: {
-          title: {
-            display: true,
-            text: 'Weather'
-          }
-        }
-      });
-    });
-  </script>
-
+  <script src="assets/js/custom.js"></script>
 
 </body>
 
