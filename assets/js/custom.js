@@ -31,21 +31,22 @@ var users = [
   }
 ];
 
-$.each(users, function (i, user) {
+
+$.each(users, function(i, user) {
   appendToUsrTable(user);
 });
 
-$("form").submit(function (e) {
+$("form").submit(function(e) {
   e.preventDefault();
 });
 
-$("form#addUser").submit(function () {
+$("form#addUser").submit(function() {
   var user = {};
-  // var id = $('input[id="id"]').val().trim();
   var nameInput = $('input[name="name"]').val().trim();
-  var roleInput = $('input[name="role"]').val().trim();
-  if (id && nameInput && roleInput) {
-    $(this).serializeArray().map(function (data) {
+  var addressInput = $('input[name="address"]').val().trim();
+  var ageInput = $('input[name="age"]').val().trim();
+  if (nameInput && addressInput && ageInput) {
+    $(this).serializeArray().map(function(data) {
       user[data.name] = data.value;
     });
     var lastUser = users[Object.keys(users).sort().pop()];
@@ -63,20 +64,22 @@ function addUser(user) {
 }
 
 function editUser(id) {
-  users.forEach(function (user, i) {
+  users.forEach(function(user, i) {
     if (user.id == id) {
       $(".modal-body").empty().append(`
-      <form id="updateUser" action="">
-          <label for="name">Name</label>
-          <input class="form-control" type="text" name="name" value="${user.name}"/>
-          <label for="role">Role</label>
-          <input class="form-control" type="text" name="role" value="${user.role}"/>
-  `);
+                <form id="updateUser" action="">
+                    <label for="name">Name</label>
+                    <input class="form-control" type="text" name="name" value="${user.name}"/>
+                    <label for="address">Address</label>
+                    <input class="form-control" type="text" name="address" value="${user.address}"/>
+                    <label for="age">Age</label>
+                    <input class="form-control" type="number" name="age" value="${user.age}" min=10 max=100/>
+            `);
       $(".modal-footer").empty().append(`
-          <button type="button" type="submit" class="btn btn-irecruit" onClick="updateUser(${id})">Update User</button>
-          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-      </form>
-  `);
+                    <button type="button" type="submit" class="btn btn-primary" onClick="updateUser(${id})">Save changes</button>
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </form>
+            `);
     }
   });
 }
@@ -84,7 +87,7 @@ function editUser(id) {
 function deleteUser(id) {
   var action = confirm("Are you sure you want to delete this user?");
   var msg = "User deleted successfully!";
-  users.forEach(function (user, i) {
+  users.forEach(function(user, i) {
     if (user.id == id && action != false) {
       users.splice(i, 1);
       $("#userTable #user-" + user.id).remove();
@@ -97,25 +100,29 @@ function updateUser(id) {
   var msg = "User updated successfully!";
   var user = {};
   user.id = id;
-  users.forEach(function (user, i) {
+  users.forEach(function(user, i) {
     if (user.id == id) {
-      $("#updateUser").children("input").each(function () {
+      $("#updateUser").children("input").each(function() {
         var value = $(this).val();
         var attr = $(this).attr("name");
         if (attr == "name") {
           user.name = value;
-        } else if (attr == "role") {
-          user.role = value;
+        } else if (attr == "address") {
+          user.address = value;
+        } else if (attr == "age") {
+          user.age = value;
         }
       });
       users.splice(i, 1);
       users.splice(user.id - 1, 0, user);
-      $("#userTable #user-" + user.id).children(".userData").each(function () {
+      $("#userTable #user-" + user.id).children(".userData").each(function() {
         var attr = $(this).attr("name");
         if (attr == "name") {
           $(this).text(user.name);
-        } else if (attr == "role") {
-          $(this).text(user.role);
+        } else if (attr == "address") {
+          $(this).text(user.address);
+        } else {
+          $(this).text(user.age);
         }
       });
       $(".modal").modal("toggle");
@@ -127,24 +134,26 @@ function updateUser(id) {
 function flashMessage(msg) {
   $(".flashMsg").remove();
   $(".row").prepend(`
-<div class="col-sm-12"><div class="flashMsg alert alert-success alert-dismissible fade in" role="alert"> <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">×</span></button> <strong>${msg}</strong></div></div>
-`);
+        <div class="col-sm-12"><div class="flashMsg alert alert-success alert-dismissible fade in" role="alert"> <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">×</span></button> <strong>${msg}</strong></div></div>
+    `);
 }
 
 function appendToUsrTable(user) {
   $("#userTable > tbody:last-child").append(`
-<tr id="user-${user.id}">
-  <td class="userData" name="name">${user.name}</td>
-  '<td class="userData" name="role">${user.role}</td>
-  '<td align="center">
-      <button class="btn btn-irecruit form-control" onClick="editUser(${user.id})" data-toggle="modal" data-target="#myModal")">Edit</button>
-  </td>
-  <td align="center">
-      <button class="btn btn-danger form-control" onClick="deleteUser(${user.id})"><span class="btn-text2">Delete</span></button>
-  </td>
-</tr>
-`);
+        <tr id="user-${user.id}">
+            <td class="userData" name="name">${user.name}</td>
+            '<td class="userData" name="address">${user.address}</td>
+            '<td id="tdAge" class="userData" name="age">${user.age}</td>
+            '<td align="center">
+                <button class="btn btn-success form-control" onClick="editUser(${user.id})" data-toggle="modal" data-target="#myModal")">EDIT</button>
+            </td>
+            <td align="center">
+                <button class="btn btn-danger form-control" onClick="deleteUser(${user.id})">DELETE</button>
+            </td>
+        </tr>
+    `);
 }
+
 
 // Data Table Logic
 $(document).ready(function () {
@@ -182,6 +191,8 @@ $(".custom-file-input").on("change", function () {
   var fileName = $(this).val().split("\\").pop();
   $(this).siblings(".custom-file-label").addClass("selected").html(fileName);
 });
+
+
 
 //Dashboard chart
 $(document).ready(function () {
