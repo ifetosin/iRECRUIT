@@ -1,5 +1,5 @@
 # iRECRUIT
-HR Recruitment Portal
+Recruitment Portal
 
 The Portal is a Recruitment solution for companies. This particular project is customized for a company named "Racer". 
 
@@ -10,7 +10,7 @@ the page is redirected to sucessful_submission.html (if the form submitted succe
 
 * To check the progress of a job application, the applicant logs in with email address and generic password, interview-schedule.html or onboarding-details.html is displayed depending on the progress of the application.
 
-HR Personnels
+HR(Human Resource) Personnels
 * Log in with work email address and password
 * Assess Applications (applications-assessment.html)
 * Schedule Interviews (applications-assessment.html)
@@ -21,4 +21,4 @@ Admins
 * Log in with work email address and password
 * Have an overview of all the activities on the portal (dashboard.html)
 * Access All Applications  (all-applications.html)
-* Profile Users (profile-users.html)
+* Profile Users (profile-users.html): The table is loaded from an array, users can be added to the table, user records can be updated or deleted if need arises
